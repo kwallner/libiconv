@@ -61,7 +61,7 @@
 /* Disabled NLS.
    The casts to 'const char *' serve the purpose of producing warnings
    for invalid uses of the value returned from these functions.
-   On pre-ANSI systems without 'const', the config.h file is supposed to
+   On pre-ANSI systems without 'const', the iconvconf.h file is supposed to
    contain "#define const".  */
 # undef gettext
 # define gettext(Msgid) ((const char *) (Msgid))

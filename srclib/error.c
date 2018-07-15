@@ -18,7 +18,7 @@
 /* Written by David MacKenzie <djm@gnu.ai.mit.edu>.  */
 
 #if !_LIBC
-# include <config.h>
+# include <iconvconf.h>
 #endif
 
 #include "error.h"

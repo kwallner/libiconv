@@ -43,6 +43,10 @@
 #include "uniwidth.h"
 #include "uniwidth/cjk.h"
 
+#ifdef WIN32
+#undef O_BINARY
+#endif
+
 /* Ensure that iconv_no_i18n does not depend on libintl.  */
 #ifdef NO_I18N
 #include <stdarg.h>

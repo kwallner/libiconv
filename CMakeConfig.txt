@@ -1,0 +1,3 @@
+IF (NOT WIN32) 
+	add_library(iconv UNKNOWN IMPORTED)
+ENDIF (NOT WIN32)

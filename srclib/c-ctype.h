@@ -26,7 +26,7 @@ along with this program; if not, see <http://www.gnu.org/licenses/>.  */
 #include <stdbool.h>
 
 #ifndef _GL_INLINE_HEADER_BEGIN
- #error "Please include config.h first."
+ #error "Please include iconvconf.h first."
 #endif
 _GL_INLINE_HEADER_BEGIN
 #ifndef C_CTYPE_INLINE

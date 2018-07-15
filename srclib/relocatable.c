@@ -17,14 +17,14 @@
 
 
 /* Tell glibc's <stdio.h> to provide a prototype for getline().
-   This must come before <config.h> because <config.h> may include
+   This must come before <iconvconf.h> because <iconvconf.h> may include
    <features.h>, and once <features.h> has been included, it's too late.  */
 #ifndef _GNU_SOURCE
 # define _GNU_SOURCE 1
 #endif
 
 #define _GL_USE_STDLIB_ALLOC 1
-#include <config.h>
+#include <iconvconf.h>
 
 /* Specification.  */
 #include "relocatable.h"

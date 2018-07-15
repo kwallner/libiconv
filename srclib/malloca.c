@@ -16,7 +16,7 @@
    along with this program; if not, see <http://www.gnu.org/licenses/>.  */
 
 #define _GL_USE_STDLIB_ALLOC 1
-#include <config.h>
+#include <iconvconf.h>
 
 /* Specification.  */
 #include "malloca.h"

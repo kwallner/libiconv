@@ -52,7 +52,7 @@
  */
 
 #define _GL_USE_STDLIB_ALLOC 1
-#include <config.h>
+#include <iconvconf.h>
 
 #include <stdio.h>
 #include <stdlib.h>

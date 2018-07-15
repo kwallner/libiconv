@@ -17,7 +17,7 @@
 
 /* Written by Bruno Haible <bruno@clisp.org>, 2010.  */
 
-#include <config.h>
+#include <iconvconf.h>
 
 #include "strerror-override.h"
 

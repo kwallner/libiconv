@@ -17,7 +17,7 @@
 
 /* written by Jim Meyering and Bruno Haible */
 
-#include <config.h>
+#include <iconvconf.h>
 
 /* Specification.  */
 #include <signal.h>

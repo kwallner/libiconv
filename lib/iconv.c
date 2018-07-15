@@ -22,7 +22,7 @@
 #include <limits.h>
 #include <stdlib.h>
 #include <string.h>
-#include "config.h"
+#include "iconvconf.h"
 #include "localcharset.h"
 
 #ifdef __CYGWIN__

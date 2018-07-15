@@ -21,7 +21,7 @@
 # define _GL_ARG_NONNULL(params)
 
 # define _GL_USE_STDLIB_ALLOC 1
-# include <config.h>
+# include <iconvconf.h>
 #endif
 
 #if !HAVE_CANONICALIZE_FILE_NAME || !FUNC_REALPATH_WORKS || defined _LIBC

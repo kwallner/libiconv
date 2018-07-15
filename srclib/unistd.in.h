@@ -135,7 +135,7 @@
 #endif
 
 #ifndef _GL_INLINE_HEADER_BEGIN
- #error "Please include config.h first."
+ #error "Please include iconvconf.h first."
 #endif
 _GL_INLINE_HEADER_BEGIN
 #ifndef _GL_UNISTD_INLINE

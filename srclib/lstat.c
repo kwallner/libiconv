@@ -17,11 +17,11 @@
 
 /* written by Jim Meyering */
 
-/* If the user's config.h happens to include <sys/stat.h>, let it include only
+/* If the user's iconvconf.h happens to include <sys/stat.h>, let it include only
    the system's <sys/stat.h> here, so that orig_lstat doesn't recurse to
    rpl_lstat.  */
 #define __need_system_sys_stat_h
-#include <config.h>
+#include <iconvconf.h>
 
 #if !HAVE_LSTAT
 /* On systems that lack symlinks, our replacement <sys/stat.h> already

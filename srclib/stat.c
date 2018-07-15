@@ -16,11 +16,11 @@
 
 /* written by Eric Blake */
 
-/* If the user's config.h happens to include <sys/stat.h>, let it include only
+/* If the user's iconvconf.h happens to include <sys/stat.h>, let it include only
    the system's <sys/stat.h> here, so that orig_stat doesn't recurse to
    rpl_stat.  */
 #define __need_system_sys_stat_h
-#include <config.h>
+#include <iconvconf.h>
 
 /* Get the original definition of stat.  It might be defined as a macro.  */
 #include <sys/types.h>

@@ -18,8 +18,8 @@
 /* written by Jim Meyering and Bruno Haible */
 
 #define _GL_USE_STDLIB_ALLOC 1
-#include <config.h>
-/* Only the AC_FUNC_MALLOC macro defines 'malloc' already in config.h.  */
+#include <iconvconf.h>
+/* Only the AC_FUNC_MALLOC macro defines 'malloc' already in iconvconf.h.  */
 #ifdef malloc
 # define NEED_MALLOC_GNU 1
 # undef malloc

@@ -18,7 +18,7 @@
 /* Written by Jim Meyering <jim@meyering.net>
    and Bruno Haible <bruno@clisp.org>.  */
 
-#include <config.h>
+#include <iconvconf.h>
 
 /* Specification.  */
 #include "xreadlink.h"

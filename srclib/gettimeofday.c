@@ -17,7 +17,7 @@
 
 /* written by Jim Meyering */
 
-#include <config.h>
+#include <iconvconf.h>
 
 /* Specification.  */
 #include <sys/time.h>

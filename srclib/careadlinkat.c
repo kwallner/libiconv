@@ -18,7 +18,7 @@
 
 /* Written by Paul Eggert, Bruno Haible, and Jim Meyering.  */
 
-#include <config.h>
+#include <iconvconf.h>
 
 #include "careadlinkat.h"
 

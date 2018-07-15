@@ -16,7 +16,7 @@
 
 /* When this file is included, it may be preceded only by preprocessor
    declarations.  Thanks to AIX.  Therefore we include it right after
-   "config.h", not later.  */
+   "iconvconf.h", not later.  */
 
 /* Avoid using the symbol _ALLOCA_H here, as Bison assumes _ALLOCA_H
    means there is a real alloca function.  */

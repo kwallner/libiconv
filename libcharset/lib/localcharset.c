@@ -17,7 +17,7 @@
 
 /* Written by Bruno Haible <bruno@clisp.org>.  */
 
-#include <config.h>
+#include <iconvconf.h>
 
 /* Specification.  */
 #include "localcharset.h"

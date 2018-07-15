@@ -20,7 +20,7 @@
 # define _GL_ARG_NONNULL(params)
 
 # define _GL_USE_STDLIB_ALLOC 1
-# include <config.h>
+# include <iconvconf.h>
 #endif
 
 #include <alloca.h>
