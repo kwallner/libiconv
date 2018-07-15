@@ -1,4 +1,3 @@
-import os
 from conans import ConanFile, CMake
 
 class libiconvConan(ConanFile):
@@ -11,6 +10,7 @@ class libiconvConan(ConanFile):
     default_options = "shared=False", "fPIC=True"
     url = "http://github.com/kwallner/libiconv"
     scm = { "type": "git", "url": "auto", "revision": "auto" }
+    no_copy_source = True
     
     def config_options(self):
         del self.settings.compiler.libcxx
@@ -22,5 +22,5 @@ class libiconvConan(ConanFile):
         cmake.install()
 
     def package_info(self):
-        self.env_info.libiconv_DIR = os.path.join(self.package_folder, 'setup')
+        self.env_info.libiconv_DIR = self.package_folder
    

@@ -477,6 +477,13 @@ target_include_directories(iconv
         $<INSTALL_INTERFACE:include>
     )
     
+
+# Install
+install(FILES 
+	${CMAKE_CURRENT_BINARY_DIR}/include/iconv.h
+	DESTINATION include
+	)
+
 install(TARGETS iconv
     EXPORT Targets
     LIBRARY DESTINATION lib
@@ -485,19 +492,9 @@ install(TARGETS iconv
     INCLUDES DESTINATION include
     )
 
-# Install
-
 
 #
-# Config 
-#
-install(EXPORT Targets
-    FILE ${PROJECT_NAME}Targets.cmake
-    DESTINATION share/cmake/${PROJECT_NAME}
-    )
-
-#
-# Export Interface
+# Export
 #
 include(CMakePackageConfigHelpers)
 
@@ -525,4 +522,9 @@ install(
         "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
     DESTINATION
         share/cmake/${PROJECT_NAME}/
+    )
+
+install(EXPORT Targets
+    FILE ${PROJECT_NAME}Targets.cmake
+    DESTINATION share/cmake/${PROJECT_NAME}
     )
