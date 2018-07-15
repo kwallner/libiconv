@@ -2,7 +2,7 @@ if(POLICY CMP0048)
     cmake_policy(SET CMP0048 NEW)
 endif()
 CMAKE_MINIMUM_REQUIRED(VERSION 3.1)
-PROJECT(libiconv)
+PROJECT(libiconv VERSION 1.15.0)
 
 if (NOT MSVC) # Everything only for msvc
     RETURN()
@@ -470,6 +470,59 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR}/include)
 # Build
 add_library(iconv lib/iconv.c libcharset/lib/localcharset.c)
 set_target_properties(iconv PROPERTIES VERSION ${LIBICONV_VERSION} SOVERSION ${LIBICONV_SOVERSION})
-set_target_properties(iconv PROPERTIES INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_BINARY_DIR}/include")
+#set_target_properties(iconv PROPERTIES INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_CURRENT_BINARY_DIR}/include")
+
+target_include_directories(iconv
+    PUBLIC
+        $<INSTALL_INTERFACE:include>
+    )
+    
+install(TARGETS iconv
+    EXPORT Targets
+    LIBRARY DESTINATION lib
+    ARCHIVE DESTINATION lib
+    RUNTIME DESTINATION bin
+    INCLUDES DESTINATION include
+    )
+
+# Install
 
 
+#
+# Config 
+#
+install(EXPORT Targets
+    FILE ${PROJECT_NAME}Targets.cmake
+    DESTINATION share/cmake/${PROJECT_NAME}
+    )
+
+#
+# Export Interface
+#
+include(CMakePackageConfigHelpers)
+
+write_basic_package_version_file("${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake"
+    VERSION ${PROJECT_VERSION}
+    COMPATIBILITY SameMajorVersion
+    )
+
+configure_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/LibraryConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
+    @ONLY
+    )
+
+install(
+    FILES
+        "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}ConfigVersion.cmake"
+        "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
+    DESTINATION
+        . # Root Directory
+    )
+
+install(
+    FILES
+        "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}Config.cmake"
+    DESTINATION
+        share/cmake/${PROJECT_NAME}/
+    )
