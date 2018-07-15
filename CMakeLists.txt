@@ -8,6 +8,14 @@ if (NOT MSVC) # Everything only for msvc
     RETURN()
 endif()
     
+#
+# Use Conan.io
+#
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup()
+conan_define_targets()
+
+
 SET(LIBICONV_VERSION "1.15.0")
 SET(LIBICONV_SOVERSION "1")
 
