@@ -485,6 +485,9 @@ target_include_directories(iconv
         $<INSTALL_INTERFACE:include>
     )
     
+if (NOT BUILD_SHARED_LIBS)
+    set_target_properties(iconv PROPERTIES INTERFACE_COMPILE_DEFINITIONS "LIBICONV_STATIC")
+endif()
 
 # Install
 install(FILES 
